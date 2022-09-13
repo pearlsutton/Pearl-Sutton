@@ -28,7 +28,40 @@
         <h2>Pearl Sutton - Site map</h2>
         <p><a href="ADMIN/admin.php">My Admin Folder</a></p>
 
-        <h2>Lab one - Setting up your sitemap.</h2>
-        <p><a href="testing.php">Testing Page</a></p>
+        <section class="grid-layout">
+            <h2 class="header">Lab Two - Choosing your topic.</h2>
+            <section class="public-files">
+                <h3>Public Files</h3>
+                <p><a href="lab2/index.php">index.php</a></p>      
+            </section>
+
+            <section class="supporting-files">
+                <h3>Supporting files</h3>
+            </section>
+
+            <section class="grader-notes">
+                <h3>Notes to grader</h3>
+                <p></p>
+            </section>
+        </section>
+
+        <section class="grid-layout">
+            <h2>Lab one - Setting up your sitemap.</h2>
+            <section class="public-files">
+                <h3>Public Files</h3>
+                <p><a href="test-page.php">Testing Page</a></p>      
+            </section>
+            <section class="supporting-files">
+                <h3>Supporting files</h3>
+                <p></p>
+            </section>
+
+            <section class="grader-notes">
+                <h3>Notes to grader</h3>
+                <p></p>
+            </section>
+        </section>
+
+        
     </body>
 </html>
