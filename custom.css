@@ -39,7 +39,7 @@ body {
     display: grid;
     grid-template-areas:
         "card1 card2"
-        "jess flyer";
+        "flyer jess";
 }
 
 
@@ -422,27 +422,27 @@ form legend {
 .leftArrow, .rightArrow {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
+    color: black;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0,0,0,0.5);
+    background-color: lavender;
+  }
+
+.leftArrow {
+    left: 230px;
+    top: 400px
   }
 
 .rightArrow {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 230px;
+    top: 400px
   }
- 
-  /* On hover, add a black background color with a little bit see-through */
+
   .leftArrow:hover, .rightArrow:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgb(177, 177, 245);
   }
 
   /* The Modal (background) */
@@ -463,10 +463,9 @@ form legend {
   /* Modal Content */
   .images {
     background-color: #fefefe;
-    margin: 20px;
     padding: 50px;
-    border: 1px solid #888;
-    width: 63%;
+    width: 50%;
+    margin: auto;
   }
   
   /* The Close Button */
@@ -477,8 +476,10 @@ form legend {
     font-weight: bold;
   }
   
+/* Highlight photos in grid, not modal */
   .cafe1:hover, .cafe2:hover, .jess1:hover, .flyer1:hover{
       opacity: 0.7;
+      cursor: pointer;
   }
   
   .close:hover, .close:focus {

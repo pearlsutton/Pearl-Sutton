@@ -13,60 +13,76 @@ include 'top.php';
                 College of Vermont.
             </p>
 
-            <h2>Modal </h2>
+            <h2>Projects</h2>
+            <!--Grid Images-->
+                <figure class="go-right">
+                    <img class="cafe1" id="card1" src="images/digital/card1.png" alt="card1" style="width:100%" >
+                    <img class="cafe2" id="card2" src="images/digital/card2.png" alt="card2" style="width:100%" >
+                    <img class="flyer1" id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%">
+                    <img class="jess1" id="jess" src="images/digital/jess.png" alt="jess" style="width:100%" onclick="currentSlide(4)">
+                </figure>
 
-            <img class="cafe1" id="card1" src="images/digital/card1.png" style="width:100%" onclick="">
-            <img class="cafe2" id="card2" src="images/digital/card2.png" alt="card2" style="width:100%" onclick="">
-            <img class="jess1" id="jess" src="images/digital/jess.png" alt="jess" style="width:100%" onclick="">
-            <img class="flyer1" id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%" onclick="">
-
+            <!--Modal Images -->
             <div id="slideshow" class="slideshow">
-            <div class="images">
-                <span class="close">&times;</span>
-                <p>Content in Modal..</p>
-                <div class="slides">
-                    <img id="card1" src="images/digital/card1.png" alt="card1" style="width:100%">
+                <div class="images">
+                    <span class="close">&times;</span>
+                    <div class="slides">
+                        <img id="card1" src="images/digital/card1.png" alt="card1" style="width:100%">
+                    </div>
+                    <div class="slides">
+                        <img id="card2" src="images/digital/card2.png" alt="card2" style="width:100%">
+                    </div>
+                    <div class="slides">
+                        <img id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%">
+                    </div>
+                    <div class="slides">
+                        <img id="jess" src="images/digital/jess.png" alt="jess" style="width:100%">
+                    </div>
+                    <a class="leftArrow" onclick="leftSlide()"><</a>
+                    <a class="rightArrow" onclick="rightSlide()">></a>
                 </div>
-                <div class="slides">
-                    <img id="card2" src="images/digital/card2.png" alt="card2" style="width:100%">
-                </div>
-                <div class="slides">
-                    <img id="jess" src="images/digital/jess.png" alt="jess" style="width:100%">
-                </div>
-                <div class="slides">
-                    <img id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%">
-                </div>
-                <a class="leftArrow" onclick="leftSlide()">prev</a>
-                <a class="rightArrow" onclick="rightSlide()">next</a>
-            </div>
             </div>
 
             <script>
-            // Get the modal
-            let slideshow = document.getElementById("slideshow");
+                // Get the modal
+                let slideshow = document.getElementById("slideshow");
+                // Images are clickable
+                let myImg = document.getElementById("card1");
+                // <span> element
+                let span = document.getElementsByClassName("close")[0];
 
-            // Get the button that opens the modal
-            let myImg = document.getElementById("card1");
+                // Click on images to expand modal
+                myImg.onclick = function() {
+                    slideshow.style.display = "block";
+                }
 
-            // Get the <span> element that closes the modal
-            let span = document.getElementsByClassName("close")[0];
+                let myImg2 = document.getElementById("card2");
+                myImg2.onclick = function() {
+                    slideshow.style.display = "block";
+                }
 
-            // When the user clicks the button, open the modal 
-            myImg.onclick = function() {
-            slideshow.style.display = "block";
-            }
+                let myImg3 = document.getElementById("flyer");
+                myImg3.onclick = function() {
+                    slideshow.style.display = "block";
+                }
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-            slideshow.style.display = "none";
-            }
+                let myImg4 = document.getElementById("jess");
+                myImg4.onclick = function() {
+                    slideshow.style.display = "block";
+                }
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-            if (event.target == slideshow) {
+                // <span> closes modal
+                span.onclick = function() {
                 slideshow.style.display = "none";
-            }
-            }
+                }
+
+                // Outside clicks closes modal
+                window.onclick = function(e) {
+                if (e.target == slideshow) {
+                    slideshow.style.display = "none";
+                }
+                }
+            
                 let slideNumber = 1;
                 displaySlide(slideNumber);
 
@@ -76,6 +92,10 @@ include 'top.php';
 
                 function rightSlide(){
                 displaySlide(slideNumber += 1);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
                 }
 
                 function displaySlide(n) {
@@ -97,7 +117,7 @@ include 'top.php';
                 }
                 slides[slideNumber-1].style.display = "block";  
                 }
-        </script>
+            </script>
 
         </section>
 
