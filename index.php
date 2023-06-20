@@ -1,95 +1,88 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Ways to Help Others</title>
-        <meta name="author" content="Pearl Sutton">
-        <meta name="description" content="One of the ways we can all make our world a better place is to help one another. Luckily for us, there are many ways we can do this. Here we present a variety of opportunities and actions people can begin to help those around them and around the world.">
+<?php
+include 'top.php';
+?>
 
-        <!-- Included Volunteering  time, donating to important causes. Perhaps mabye postive impacts parapgraph/section -->
+    <main class="box1">
+        <h1>Home</h1>
 
-        <style>
-            figure{
+        <section class="box2">
+            <h2>What is Pearl Productions?</h2>
+            <p>Hello and welcome to Pearl Productions! This is an online portfolio and website for myself to display my 
+                multimedia creative work across various fields, as well as begin a way to build a relationship between me 
+                and those who may be interested in my work. Currently, my work is composed of pieces from a range of mediums,
+                including photographs, drawings, paintings, digital art, and even some computer programming.
+            </p>
+        </section>
 
-                float: left; 
-                text-align: center; 
-                width: 20%;    
-            }
-            
-            img{
-                max-width: 100%;
-            }
-        </style>
-    </head>
+        <section class="box3">
+            <h2>Why?</h2>
+                <p>
+                Building a portfolio is a great way to display one’s work for others to see. It is also a wonderful way to track 
+                progress and see the improvement you have made overtime. I personally really enjoy seeing the changes and further 
+                of my skills as time goes on. And I believe that placing my works into one single place, this online portfolio, 
+                is the perfect opportunity to do this.
 
-    <body>
-        <main>
-            <h1>Ways to Help Others</h1>
-        
-            <section>
-                <h2>Being Kind</h2>
-                <p>One of the first ways that people can begin helping others that does not involve much energy to perfrom is to be kind to one another.</p>
-                <p>Being kind and respectful to one another can work to spread positivity and understanding to those around us.</p>
-        <!-- perhaps reword these paragraphs a bit more -->
+        </section>
 
-            </section>
+        <section class="box4">
+            <h2>Services</h2>
+            <p>Currently, I am not offering any services for clients, as I am continuing to refine and build up my portfolio.
+            However, this is a possibility that I would like to pursue in the future. I would like to use this time to build my skills,
+            as well as my own personal style to convey messages and meanings to others.
+            </p>
 
-            <section>
-                <h2>Volunteering</h2>
-                <p>Volunteering your time to help at shelters and important causes is a great and direct way of reaching out to help those that might need help.</p>
+            <p>Some of the places that you can volunteer at are:</p><br>
+            <table>
+                <caption><strong>Specific Mediums I Have Used</strong></caption>
+                <tr>
+                    <th>Digital Art</th>
+                    <th>Drawing</th>
+                    <th>Painting</th>
+                    <th>Photography</th>
+                    <th>Computer Programming</th>
+                </tr>
 
-                <p>Some of the places that you can volunteer at are:</p>
-                <table>
-                    <tr>
-                        <th>Organizations</th>    <th>Shelters</th>
-                        <th>Local Centers</th>
-                    </tr>
-                    
-                    <tr>
-                        <td>Disaster Relief</td>
-                        <td>Homeless</td>
-                        <td>Parks & Recreation</td>
-                    </tr>
+                <?php
+                $sql = 'SELECT fldDigitalArt, fldDrawing, fldPainting, fldPhotography,
+                fldComputerProgramming FROM tblMediumsUsed';
 
-                    <tr>
-                        <td>Human & Civil Rights</td>
-                        <td>Animal</td>
-                        <td>Public Library</td>
-                    </tr>
+                $statement = $pdo->prepare($sql);
+                $statement->execute();
 
-                    <tr>
-                        <td>Political & Advocacy Groups</td>
-                        <td>Soup Kitchens</td>
-                        <td>Community Center</td>
-                    </tr>
+                $records = $statement->fetchAll();
 
-                    <tr>
-                        <td colspan="3">Source: <cite><a href="https://ofhsoupkitchen.org/100-ways-to-help-others" target="_blank">https://ofhsoupkitchen.org/100-ways-to-help-others<a></cite></td>
-                    </tr>
+                foreach($records as $record) {
+                    print '<tr>'; 
+                    print '<td>' . $record['fldDigitalArt'] . '</td>';
+                    print '<td>' . $record['fldDrawing'] . '</td>';
+                    print '<td>' . $record['fldPainting'] . '</td>';
+                    print '<td>' . $record['fldPhotography'] . '</td>';
+                    print '<td>' . $record['fldComputerProgramming'] . '</td>';
+                    print '</tr>' . PHP_EOL;
+                }
+                ?>
 
-                    <tr>
-                    <td colspan="3">Source: <cite><a href="https://www.moneycrashers.com/good-places-volunteer-opportunities-organizations/" target="_blank">https://www.moneycrashers.com/good-places-volunteer-opportunities-organizations/<a></cite></td>
+            </table>
+        </section>
 
-                </table>
 
-            </section>
+        <section class="box5">
+            <h2>Future Projects</h2>
+            <p>There are some projects and different mediums that I would like to work with in the future. The field of filmmaking is one particular 
+            path I am excited to follow. Video art, script writing, planning, pre and post production, have always been something that has sparked a 
+            light in my eyes. Animation, as well as storytelling are also something that I would like to try to delve into more deeply. 
+            As time goes on, I will continue to put my best work out for others to see. 
+                </p>
+        </section>
 
-            <section>
-                <h2>Donating</h2>
-                <p>Another way to help others is to donate. Donating money is not the only way for one to do this. Donating old or not-used anymore items is a great way to give to others. These could include:</p>
-                <ul>
-                    <li>Clothes</li>
-                    <li>Books</li>
-                    <li>Toys</li>
-                    <li>Source: <cite>Pearl Sutton</cite></li>
+        <section class="box6">
+            <h2>Goals</h2>
+            <p>My goal for this current project is to create a body of my work to be able to store and display for both an audience, whether big or small.
+            I would also like for it to be a way for me to connect with others that share the same interests and ideas. 
+                </p>
+        </section>
 
-                </ul>
-                <p>Donating fresh or canned food is another way for people to donate.</p>
-                <figure style="float: left; text-align: center; width 20%;">
-                    <img src="https://www.thespruceeats.com/thmb/XQPDM0pa4_L7bVcxO8JJ5xR4QQE=/2121x1414/filters:fill(auto,1)/cannedfoodsWarren_Price-2d07bf3a98814f7b8f061e800a509627.jpg" alt="Canned Food">
-                <figcaption><cite><a href="https://www.thespruceeats.com/how-long-does-canned-food-really-last-5114518" target="_blank">Vt Fish and Wildlife</a></cite></figcaption>
-                </figure>
-            </section> 
-        </main>
-    </body>
-    </html>
+    </main>
+<?php
+include 'footer.php'
+?> 
