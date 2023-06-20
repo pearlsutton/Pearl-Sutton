@@ -4,6 +4,40 @@ include 'top.php';
 
     <main class="box-1">
         <h1>Drawing</h1>
+        <script> 
+                let slideNumber = 1;
+                displaySlide(slideNumber);
+
+                function leftSlide(){
+                    displaySlide(slideNumber -= 1);
+                }
+
+                function rightSlide(){
+                    displaySlide(slideNumber += 1);
+                }
+
+                function displaySlide(n) {
+                    let index;
+                    let slides = document.getElementsByClassName("slides");
+                    
+                    if (n > slides.length) 
+                    {
+                        slideNumber = 1;
+                    }    
+                    
+                    if (n < 1) 
+                    {
+                        slideNumber = slides.length;
+                    }
+                    
+                    for (index = 0; index < slides.length; index++) {
+                        slides[index].style.display = "none";  
+                    }
+                    slides[slideNumber-1].style.display = "block";  
+                }
+            </script>
+
+
             <section class="box-2">
             <h2>Traditional</h2>
             <p>Drawing is one of the first mediums I learned. In this study I used graphite, charcoal, colored pencils, pen, 
@@ -11,15 +45,32 @@ include 'top.php';
                 Community College of Vermont.
             </p>
 
-            <figure class="go-right">
-                <img id="teapot" src="images/drawings/teapot.png" alt="teapot">
-                <img id="rubix" src="images/drawings/rubix.png" alt="rubix">
-                <img id="colored" src="images/drawings/colored.jpg" alt="colored">
-                <img id="hourglass" src="images/drawings/hourglass.png" alt="hourglass">
-                <img id="horse" src="images/drawings/horse.jpeg" alt="horse">
-                <img id="abstract" src="images/drawings/abstract.jpg" alt="abstract">
-                <img id="skeleton" src="images/drawings/skeleton.png" alt="skeleton">
-            </figure>
+            <div class="slideshow">
+                <div class="slides">
+                    <img id="teapot" src="images/drawings/teapot.png" alt="teapot" style="width: 100%">
+                </div>
+                <div class="slides">
+                    <img id="rubix" src="images/drawings/rubix.png" alt="rubix" style="width: 100%">
+                </div>
+                <div class="slides">
+                    <img id="colored" src="images/drawings/colored.jpg" alt="colored" style="width: 100%">
+                </div>
+                <div class="slides">
+                    <img id="hourglass" src="images/drawings/hourglass.png" alt="hourglass" style="width: 100%">
+                </div>
+                <div class="slides">
+                    <img id="horse" src="images/drawings/horse.jpeg" alt="horse" style="width: 100%">
+                </div>
+                <div class="slides">
+                    <img id="abstract" src="images/drawings/abstract.jpg" alt="abstract" style="width: 100%">
+                </div>
+                <div class="slides">
+                    <img id="skeleton" src="images/drawings/skeleton.png" alt="skeleton" style="width: 100%">
+                </div>
+            </div>
+
+            <a class="leftArrow" onclick="leftSlide()">prev</a>
+            <a class="rightArrow" onclick="rightSlide()">next</a>
 
         </section>
 
@@ -33,46 +84,26 @@ include 'top.php';
 
 
             <!--<img id="jess" src="images/digital/jess.png" alt="jess" onclick="openImage()" style="width:100%"> -->
-         
-            <!-- <script src="oranges.js"></script> -->
 
             <div class="slideshow">
-                <div class="slide">
+                <div class="slides">
                     <img id="pumpkins" src="images/paintings/pumpkins.png" alt="pumpkins" style="width: 100%">
                 </div>
-                <div class="slide">
+                <div class="slides">
                     <img id="starryblue" src="images/paintings/starryblue.jpeg" alt="starryblue" style="width: 100%">
                 </div>
-                <div class="slide">
+                <div class="slides">
                     <img id="starryred" src="images/paintings/starryred.jpeg" alt="starryred" style="width: 100%">
                 </div>
             </div>
 
-            <!--Clicking through slides-->
-            <!--<script> 
-                function oranges(){
-                    alert("Press ok to continue.");
-                }
-            </script>-->
-             <script src="oranges.js"></script> 
-
-
-            <a class="leftArrow" onclick="oranges()">prev</a>
-            <a class="rightArrow" onclick="oranges()">next</a>
-
-
-
-
-
-
-        
-        
-        
+            <a class="leftArrow" onclick="leftSlide()">prev</a>
+            <a class="rightArrow" onclick="rightSlide()">next</a>
 
 <!-- 
             <div id="grid-container" class="row">
                 <div class="column">
-                    <img id="jess" src="images/digital/jess.png" alt="jess" onclick="openSlides();currentSlide(1)">
+                    
                 </div>
 
                 <div class="column">
