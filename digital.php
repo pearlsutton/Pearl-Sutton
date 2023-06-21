@@ -16,16 +16,16 @@ include 'top.php';
             <h2>Projects</h2>
             <!--Grid Images-->
                 <figure class="go-right">
-                    <img class="cafe1" id="card1" src="images/digital/card1.png" alt="card1" style="width:100%" >
-                    <img class="cafe2" id="card2" src="images/digital/card2.png" alt="card2" style="width:100%" >
-                    <img class="flyer1" id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%">
-                    <img class="jess1" id="jess" src="images/digital/jess.png" alt="jess" style="width:100%" onclick="currentSlide(4)">
+                    <img class="demo" id="card1" src="images/digital/card1.png" alt="card1" style="width:100%" onclick="openImage();currentSlide(1)">
+                    <img class="demo" id="card2" src="images/digital/card2.png" alt="card2" style="width:100%" onclick="openImage();currentSlide(2)">
+                    <img class="demo" id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%" onclick="openImage();currentSlide(3)">
+                    <img class="demo" id="jess" src="images/digital/jess.png" alt="jess" style="width:100%" onclick="openImage();currentSlide(4)">
                 </figure>
 
             <!--Modal Images -->
             <div id="slideshow" class="slideshow">
+                <span class="close">&times;</span>
                 <div class="images">
-                    <span class="close">&times;</span>
                     <div class="slides">
                         <img id="card1" src="images/digital/card1.png" alt="card1" style="width:100%">
                     </div>
@@ -44,48 +44,22 @@ include 'top.php';
             </div>
 
             <script>
-                // Get the modal
-                let slideshow = document.getElementById("slideshow");
-                // Images are clickable
-                let myImg = document.getElementById("card1");
-                // <span> element
+                function openImage() {
+                    document.getElementById("slideshow").style.display = "block";
+                }
+
+                // <span> element closes modal
                 let span = document.getElementsByClassName("close")[0];
-
-                // Click on images to expand modal
-                myImg.onclick = function() {
-                    slideshow.style.display = "block";
-                }
-
-                let myImg2 = document.getElementById("card2");
-                myImg2.onclick = function() {
-                    slideshow.style.display = "block";
-                }
-
-                let myImg3 = document.getElementById("flyer");
-                myImg3.onclick = function() {
-                    slideshow.style.display = "block";
-                }
-
-                let myImg4 = document.getElementById("jess");
-                myImg4.onclick = function() {
-                    slideshow.style.display = "block";
-                }
-
-                // <span> closes modal
                 span.onclick = function() {
-                slideshow.style.display = "none";
-                }
-
-                // Outside clicks closes modal
-                window.onclick = function(e) {
-                if (e.target == slideshow) {
                     slideshow.style.display = "none";
                 }
+                // Outside slideshow closes modal
+                window.onclick = function(e) {
+                    if (e.target == slideshow) {
+                        slideshow.style.display = "none";
+                    }
                 }
             
-                let slideNumber = 1;
-                displaySlide(slideNumber);
-
                 function leftSlide(){
                 displaySlide(slideNumber -= 1);
                 }
@@ -94,28 +68,28 @@ include 'top.php';
                 displaySlide(slideNumber += 1);
                 }
 
+                let slideNumber = 1;
+                displaySlide(slideNumber);
+                
                 function currentSlide(n) {
-                    showSlides(slideIndex = n);
+                    displaySlide(slideNumber = n);
                 }
 
                 function displaySlide(n) {
-                let index;
-                let slides = document.getElementsByClassName("slides");
+                    let index;
+                    let slides = document.getElementsByClassName("slides");
 
-                if (n > slides.length) 
-                {
-                    slideNumber = 1;
-                }    
+                    if (n > slides.length) {
+                        slideNumber = 1;
+                    }    
+                    if (n < 1) {
+                        slideNumber = slides.length;
+                    }
 
-                if (n < 1) 
-                {
-                    slideNumber = slides.length;
-                }
-
-                for (index = 0; index < slides.length; index++) {
-                    slides[index].style.display = "none";  
-                }
-                slides[slideNumber-1].style.display = "block";  
+                    for (index = 0; index < slides.length; index++) {
+                        slides[index].style.display = "none";  
+                    }
+                    slides[slideNumber-1].style.display = "block";  
                 }
             </script>
 
