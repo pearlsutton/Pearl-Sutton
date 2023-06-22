@@ -156,8 +156,6 @@ include 'top.php';
                     <a class="rightArrow" onclick="rightSlide()">></a>
                 </div>
             </div>
-
-
         </section>
     </main>
     <script src="digital.js"></script>
