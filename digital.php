@@ -13,7 +13,7 @@ include 'top.php';
 
             <h2>Projects</h2>
             <!--Grid Images-->
-                <figure class="go-right">
+                <figure class="digitalGrid">
                     <img class="grid" id="card1" src="images/digital/card1.png" alt="card1" style="width:100%" onclick="openImage();currentSlide(1)">
                     <img class="grid" id="card2" src="images/digital/card2.png" alt="card2" style="width:100%" onclick="openImage();currentSlide(2)">
                     <img class="grid" id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%" onclick="openImage();currentSlide(3)">
