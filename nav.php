@@ -19,6 +19,11 @@
     }
     ?>" href="drawing.php">Drawing</a>
 
+<a class="<?php if($pathParts['filename'] == 'digital') {
+        print 'activePage';
+    }
+    ?>" href="digital.php">Digital</a>
+
     <a class="<?php if($pathParts['filename'] == 'about') {
             print 'activePage';
         }

@@ -4,6 +4,7 @@ include 'top.php';
 
     <main class="box-1">
         <h1>Drawing</h1>
+        <section class="box-1">
         <script> 
                 let slideNumber = 1;
                 displaySlide(slideNumber);

@@ -4,13 +4,15 @@ include 'top.php';
     <main class="box1">
         <h1>Painting</h1>
 
-        <section class="portfoliobox4">
+        <section class="paintingBox">
             <h2>Painting</h2>
-            <p>These painting pieces were created in the fall of 2022 at the University of Vermont for the class: Painting: Color and Invention. 
-                The main focus of this course was to study how color can be created and used to produce different outcomes. 
-                We learned the four main Renaissance techniques: up-modeling, down-modeling, unione, and cangiante. 
-                All of these paintings used acrylic paintings: primary cyan, primary magenta, and primary yellow. 
-                The goal of this class was to use the three colors to create the palettes we wanted to use for each piece. </p>
+            <p>Painting is a very expressive medium that can be both abstract and technical. There are a variety of approaches, styles, techniques, and paints themselves that are available to painters. The works shown below were created between the fall of 2022 and the summer of 2023. 
+            </p>
+            <p>
+            The ones created in 2022 were painted with acrylics using a limited color palette of the three primary colors: magenta, cyan, and yellow. The main focus of this approach was to study how color can be created using different saturation levels and values to form creative and expressive pieces. The focus was also directed towards understanding how these mixed colors may intertwine and interact with one another to create harmonious or striking relationships. 
+            </p>
+            <p> The watercolor pieces were completed in the summer of 2023. The watercolors were a surprising and challenging transition from acrylics. In this study, the curriculum followed more of learning the properties and characteristics of the watercolors, how they behaved and how we could use these to produce the ideas we wished. 
+            </p>
 
             <figure class="go-right">
                 <img id="pumpkins" src="images/paintings/pumpkins.png" alt="pumpkins">

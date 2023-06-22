@@ -390,9 +390,20 @@ form legend {
     background-color: lightblue;
 }
 
-.box-2 p {
-    width: 100%;
-    text-indent: 3em;
+.box-2 p, .box2 p, .box3 p, .box4 p, .box5 p, .photographyBox p, .paintingBox p,{
+    width: 130%;
+    margin: 10px;
+}
+
+.box4 table {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.paintingBox p {
+    width: 130%;
+    margin: 10px;
 }
 
 .form-it-self {
@@ -477,7 +488,7 @@ form legend {
   }
   
 /* Highlight photos in grid, not modal */
-  .cafe1:hover, .cafe2:hover, .jess1:hover, .flyer1:hover{
+  .grid:hover{
       opacity: 0.7;
       cursor: pointer;
   }
