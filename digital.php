@@ -41,7 +41,7 @@ include 'top.php';
             </div>
         </section>
     </main>
-    <script src="aboutme.js"></script>
+    <script src="digital.js"></script>
 
 <?php
 include 'footer.php'

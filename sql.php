@@ -12,56 +12,51 @@ include 'top.php';
             fldDrawing varchar(30),
             fldPainting varchar(30),
             fldPhotography varchar(30),
-            fldComputerProgramming varchar(30)
         )
         </pre>
 
         <h2>Insert Data 1</h2>
         <pre>
-        INSERT INTO tblMediumsUsed (fldDigitalArt, fldDrawing, fldPainting, fldPhotography, fldComputerProgramming) VALUES
-        ('Adobe Illustrator', 'Graphite', 'Acrylic', 'Nikon D5500', 'HTML'),
-        ('Adobe Photoshop', 'Charcoal', 'Oil Paint', 'Canon Vixia', 'CSS'),
-        ('Adobe Design', 'Crayon', 'Watercolor', 'iPhone', 'Python')
+        INSERT INTO tblMediumsUsed (fldDigitalArt, fldDrawing, fldPainting, fldPhotography) VALUES
+        ('Adobe Illustrator', 'Graphite', 'Acrylic', 'Nikon D5500'),
+        ('Adobe Photoshop', 'Charcoal', 'Oil Paint', 'Canon Vixia'),
+        ('Adobe Design', 'Crayon', 'Watercolor', 'iPhone')
         
         </pre>
 
         <h2>Select records 1</h2>
         <pre>
         SELECT fldDigitalArt, fldDrawing, fldPainting, fldPhotography,
-        fldComputerProgramming FROM tblMediumsUsed
+        FROM tblMediumsUsed
         </pre>
 
     <!-- second table -->
 
         <h2>Create table 2</h2>
         <pre>
-        CREATE TABLE tblFeedback (
-            pmkFeedbackId int(15) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        CREATE TABLE tblContact (
+            pmkContactInfo int(15) NOT NULL AUTO_INCREMENT PRIMARY KEY,
             fldFirstName varchar(30),
             fldLastName varchar(30),
             fldEmail varchar(50) DEFAULT NULL,
-            fldVisit varchar(15),
-            fldFilm tinyint(1),
-            fldClothing tinyint(1),
-            fldAnimation tinyint(1),
-            fldFavoriteMedium VARCHAR(40),
-            fldComments TEXT
+            fldSubject varchar(30),
+            fldComments TEXT,
+            fldVisit varchar(15), 
         )
         </pre>
 
         <h2>Insert Data 2</h2>
         <pre>
-        INSERT INTO tblFeedback (pmkFeedbackId, fldFirstName, fldLastName,
-        fldEmail, fldVisit, fldFilm, fldClothing, fldAnimation, fldFavoriteMedium,
-        fldComments)
+        INSERT INTO tblContact (pmkContactInfo, fldFirstName, fldLastName,
+        fldEmail, fldSubject, fldComments, fldVisit)
         VALUES
-        ('Pearl', 'Sutton', 'psutton1@uvm.edu', 'Yes', 0, 1, 1, 'Painting' 'great')
+        ('Pearl', 'Sutton', 'psutton1@uvm.edu', 'Commission', 'great', 'Yes')
         </pre>
 
         <h2>Select records 2</h2>
         <pre>
-        SELECT fldFirstName, fldLastName, fldEmail, fldVisit, fldFilm, fldClothing, fldAnimation, fldFavoriteMedium, 
-        fldFavoriteMedium FROM tblFeedback
+        SELECT fldFirstName, fldLastName, fldEmail, fldSubject, fldComments,
+        fldVisit FROM tblContact
         </pre>
 </main>
 <?php
