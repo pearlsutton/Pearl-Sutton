@@ -51,6 +51,25 @@ body {
         "circle mountains rainbow stars";
 }
 
+.aboutBox {
+    background-color: var(--main-bg-color);;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "h1 h1"
+        "paragraph photo";
+}
+
+.footer {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    padding: 2%;
+    grid-template-areas:
+        "navigate navigate map"
+        "navColumn1 navColumn2 sitemap";
+}
 
 /* navigation */
 nav a:link {
@@ -59,17 +78,17 @@ nav a:link {
 
 nav a:hover {
     text-decoration: underline;
-    background-color: rgb(247, 160, 11);
+    background-color: rgb(96, 94, 244);
 }
 
 nav a {
     display: inline-block;
     padding: 1%;
-    width: 12%
+    width: 11%
 }
 
 nav {
-    background-color: lavender;
+    background-color: tan;
     border-color: black;
     text-align: right;
     grid-area: nav;
@@ -113,6 +132,39 @@ header {
     grid-area: stars;
 }
 
+#profileParagraph {
+    grid-area: paragraph;
+    padding: 8%;
+}
+
+#profilePhoto {
+    grid-area: photo;
+    padding: 1%;
+}
+
+#navigate {
+    grid-area: navigate;
+}
+
+#navColumn1 {
+    grid-area: navColumn1;
+}
+
+#navColumn2 {
+    grid-area: navColumn2;
+    margin-right: 300px;
+}
+
+#map {
+    grid-area: map;
+}
+
+#sitemap {
+    grid-area: sitemap;
+    margin-right: 100px;
+}
+
+
 main {
     grid-area: main;
     padding: .8%
@@ -123,7 +175,7 @@ footer {
     display: flex;
     width: auto;
     height: auto;
-    background-color: tan;
+    background-color: rgb(208, 111, 100);
 }
 
 /* form page, questions */
@@ -202,7 +254,7 @@ input[type=radio] + label {
 }
 
 label {
-    width: 5em;
+    width: 100px;
     display: inline-block;
  }
  
@@ -210,9 +262,6 @@ label {
     box-sizing: border-box;
     width: 20em;
     padding: .5em;
-    margin: 1em;
-    border: .1em #aaa;
-    border-radius: .5em;
 }
 
  input[type=email] {
@@ -220,9 +269,7 @@ label {
      width: 20em;
      padding: .5em;
      border: .1em #aaa;
-     border-radius: .5em;
      color: black;
-     margin: 1em;
      border: none;
 }
 
@@ -277,7 +324,7 @@ figure {
 
 /*  */
 body {
-    width: 90%;
+    width: 99%;
     margin: auto;
 }
 
@@ -305,12 +352,6 @@ section, h2, p {
     margin: auto;
 }
 
-.box1-form {
-    width: 70%;
-    margin: auto;
-    color: var(--main-text-color);
-}
-
 /* lists */
 li {
     color: black;
@@ -328,7 +369,7 @@ figcaption {
 }
 
 a:hover {
-    background-color: lightblue;
+    background-color: rgb(195, 235, 249);
     }
 
 h1 {
@@ -337,7 +378,6 @@ h1 {
 
 footer p a {
     font-size: large;
-    
     color: black;
 }
 
@@ -379,13 +419,18 @@ tr:hover {
 }
 
 /*  */
+.contact {
+    background-color: tan;
+}
+
 form {
     width: 70%;
     margin: auto;
 }
 
 form p {
-    text-indent: 0;
+    /*! text-indent: 0; */
+    padding: 10px;
 }
 
 form fieldset {
@@ -408,14 +453,11 @@ form legend {
 }
 
 .activePage {
-    text-color: lightsalmon;
+    background-color: rgb(108, 187, 220);
 }
 
-.activePage {
-    background-color: lightblue;
-}
 
-.box-2 p, .box2 p, .box3 p, .box4 p, .box5 p, .photographyBox p, .paintingBox p,{
+.box2 p, .box3 p, .box4 p, .box5 p, .photographyBox p, .paintingBox p, .box-2 p {
     width: 130%;
     margin: 10px;
 }
@@ -426,16 +468,11 @@ form legend {
     padding: 10px;
 }
 
-.paintingBox p {
-    width: 130%;
-    margin: 10px;
-}
-
 .form-it-self {
     width: 100%;
 }
 
-.contact, .radio, .listbox, .checkbox, .comments{
+.radio, .listbox, .checkbox, .comments{
     margin: 2%
 }
 
@@ -449,13 +486,10 @@ form legend {
 }
 
 
-
-  
 .leftArrow, .rightArrow {
     cursor: pointer;
     position: absolute;
     padding: 16px;
-    color: white;
     font-weight: bold;
     font-size: 18px;
     color: black;
@@ -473,9 +507,6 @@ form legend {
     top: 400px
   }
 
-  .leftArrow:hover, .rightArrow:hover {
-    background-color: rgb(177, 177, 245);
-  }
 
   .slideshow {
     max-width: 2000px;
@@ -487,7 +518,6 @@ form legend {
 .slideshow {
     display: none;
     position: fixed;
-    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -500,7 +530,7 @@ form legend {
   /* Modal Content */
   .images {
     background-color: #fefefe;
-    padding: 50px;
+    padding: 30px;
     width: 50%;
     margin: auto;
   }
@@ -519,13 +549,41 @@ form legend {
       cursor: pointer;
   }
   
-  .close:hover, .close:focus {
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
-  
-  .leftArrow:hover, .rightArrow:hover {
+
+
+.leftArrow:hover, .rightArrow:hover {
       cursor: pointer;
-      background-color: rgba(0,0,0,0.2);
+      background-color: green;
   }
+
+.vertical {
+    width: 72%;
+    margin: auto;
+}
+
+span {
+    margin-right: 20%;
+}
+
+#navigate p, #map p {
+    color: tan;
+}
+
+#navigate p, #map {
+    background-color: rgb(102, 102, 231);
+}
+
+
+.newsletter {
+    width: 100%;
+}
+
+#txtFirstName, #txtLastName, #txtEmail {
+    width: 100%;
+    border: 0;
+}

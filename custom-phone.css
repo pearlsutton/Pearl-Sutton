@@ -1,0 +1,64 @@
+nav {
+    width: 78%;
+}
+
+nav a {
+    width: 100px;
+}
+
+.box1 {
+    width: 99%;
+}
+
+.box-1 {
+    width: 99%;
+}
+
+.box1-form {
+    width: 99%;
+}
+
+#frmOrganizationThoughts, #question1, #question2, #question3 {
+    width: 20em;
+}
+
+.photographyGrid {
+    background-color: var(--main-bg-color);;
+    width: 140%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "circle"
+        "mountains"
+        "rainbow"
+        "stars";
+}
+
+.photographyBox {
+    width: 65%;
+}
+
+.footer {
+    width: 100%;
+    margin: 10px;
+    display: grid;
+    padding: 1%;
+    grid-template-areas:
+        "navigate navigate map"
+        "navColumn1 navColumn2 sitemap";
+}
+
+#navColumn1 {
+    margin-right: 10px;
+    padding: 2px;
+}
+
+#navColumn2 {
+    margin-right: 10px;
+    padding: 2px;
+}
+
+#sitemap {
+    margin-right: 1px;
+    padding: 2px;
+}

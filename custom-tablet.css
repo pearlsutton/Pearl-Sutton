@@ -1,0 +1,102 @@
+body {
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main main"
+        "foot foot"
+}
+
+.box1, .box-1, .box1-form {
+    width: 33em;
+}
+
+main {
+    width: 80%;
+}
+
+nav a {
+    padding: .8em;
+    width: 15%;
+    background-color: lavender;
+}
+
+
+nav {
+    background-color: lavender;
+    text-align: center;
+    grid-area: nav;
+}
+
+.buttons {
+    width: 500%;
+    border: aliceblue;
+    margin-left: 10%;
+}
+
+/* Home page centered */
+.box1 {
+    margin: auto;
+}
+
+/* Profile photo */
+#profilePhoto {
+    margin: auto;
+    width: 380px;
+}
+
+/* Digital page centered */
+.digitalGrid {
+    background-color: var(--main-bg-color);;
+    width: 140%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "jess card1 card2"
+        "flyer flyer";
+}
+
+/* Photography photos 2 columns */
+.photographyGrid {
+    background-color: var(--main-bg-color);;
+    width: 140%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "circle mountains"
+        "rainbow stars";
+}
+
+/* Left and Right Arrows */
+.leftArrow {
+    left: 70px;
+    top: 180px;
+}
+.rightArrow {
+    right: 70px;
+    top: 180px;
+}
+
+/* Create padding on top */
+.slideshow {
+    padding-top: 20px;
+}
+
+/* Resize images in modal */
+.images {
+    padding: 10px;
+    width: 65%;
+}
+
+/* Vertical images */
+.vertical {
+    width: 100%
+}
+
+/* X mark to exit */
+span {
+    margin-right: 10%;
+}
+
+
+
+
