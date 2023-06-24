@@ -38,10 +38,14 @@ function verifyAlphaNum($testString) {
 }
 
 ?>
-    <main class="box1-form">
-        <h1>Get in Touch</h1>
-            <section class = "form-info">
-                <h2>This page is for you to send any comissions, requests, feedback, or sign up for our newsletter.</h2>
+    <main class="box-1">
+        <h1>Contact</h1>
+            <section class = "box-2">
+                <h2>Get in touch with us and provide us some feedback!</h2>
+                <p> Sign up for our monthly newsletter, send in any comissions or requests, and anything you would like to talk about!
+                </p>
+                <p> We would also greatly appreciate any feedback you have, regarding both the artists' work and the functionality of the site.
+                </p>
                 <?php
                 if($_SERVER["REQUEST_METHOD"] == 'POST'){
                     // Sanitize data
@@ -176,7 +180,7 @@ function verifyAlphaNum($testString) {
                 <h3>Feedback:</h3>
                 <form action="#" id="frmFeedback" method="post">
 
-                    <fieldset class="contact">
+                    <fieldset class="newsletter">
                         <legend>Sign Up for Our Newsletter:</legend>
                         <p>
                             <label class="required" for="txtFirstName">First Name:</label>

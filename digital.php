@@ -2,7 +2,6 @@
 include 'top.php';
 ?>
 
-<body>
     <main class="box-1">
         <h1>Digital</h1>
         <section class="box-2">
@@ -25,25 +24,24 @@ include 'top.php';
                 <span class="close">&times;</span>
                 <div class="images">
                     <div class="slides">
-                        <img id="card1" src="images/digital/card1.png" alt="card1" style="width:100%">
+                        <img id="card1i" src="images/digital/card1.png" alt="card1" style="width:100%">
                     </div>
                     <div class="slides">
-                        <img id="card2" src="images/digital/card2.png" alt="card2" style="width:100%">
+                        <img id="card2i" src="images/digital/card2.png" alt="card2" style="width:100%">
                     </div>
                     <div class="slides">
-                        <img id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%">
+                        <img id="flyeri" src="images/digital/flyer.jpg" alt="flyer" style="width:100%">
                     </div>
                     <div class="slides">
-                        <img id="jess" src="images/digital/jess.png" alt="jess" style="width:100%">
+                        <img id="jessi" src="images/digital/jess.png" alt="jess" style="width:100%">
                     </div>
-                    <a class="leftArrow" onclick="leftSlide()"><</a>
-                    <a class="rightArrow" onclick="rightSlide()">></a>
+                    <a class="leftArrow" onclick="leftSlide()">＜</a>
+                    <a class="rightArrow" onclick="rightSlide()">＞</a>
                 </div>
             </div>
         </section>
     </main>
-    <script src="digital.js"></script>
-</body>
+    <script src="aboutme.js"></script>
 
 <?php
 include 'footer.php'

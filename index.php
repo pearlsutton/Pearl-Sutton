@@ -2,7 +2,7 @@
 include 'top.php';
 ?>
 
-    <main class="box1">
+    <main class="box-1">
         <h1>Home</h1>
 
         <section class="box2">

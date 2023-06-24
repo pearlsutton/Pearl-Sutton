@@ -2,7 +2,7 @@
 include 'top.php';
 ?>
 
-<body>
+
     <main class="box-1">
         <h1>Drawing</h1>
         <section class="box-2">
@@ -14,9 +14,9 @@ include 'top.php';
                 <figure class="digitalGrid">
                     <img class="grid" id="teapot" src="images/drawings/teapot.png" alt="teapot" style="width:100%" onclick="openImage();currentSlide(1)">
                     <img class="grid" id="rubix" src="images/drawings/rubix.png" alt="rubix" style="width:100%" onclick="openImage();currentSlide(2)">
-                    <img class="grid" id="horse" src="images/drawings/horse.png" alt="horse" style="width:100%" onclick="openImage();currentSlide(3)">
+                    <img class="grid" id="hourglass" src="images/drawings/hourglass.png" alt="hourglass" style="width:100%" onclick="openImage();currentSlide(3)">
                     <img class="grid" id="skeleton" src="images/drawings/skeleton.png" alt="skeleton" style="width:100%" onclick="openImage();currentSlide(4)">
-                    <img class="grid" id="hourglass" src="images/drawings/hourglass.png" alt="hourglass" style="width:100%" onclick="openImage();currentSlide(5)">
+                    <img class="grid" id="horse" src="images/drawings/horse.png" alt="horse" style="width:100%" onclick="openImage();currentSlide(5)">
                     
                 </figure>
 
@@ -25,28 +25,28 @@ include 'top.php';
                 <span class="close">&times;</span>
                 <div class="images">
                     <div class="slides">
-                        <img id="teapot" src="images/drawings/teapot.png" alt="teapot" style="width:100%">
+                        <img id="teapot2" src="images/drawings/teapot.png" alt="teapot" style="width:100%">
                     </div>
                     <div class="slides">
-                        <img id="rubix" src="images/drawings/rubix.png" alt="rubix" style="width:100%">
+                        <img id="rubix2" src="images/drawings/rubix.png" alt="rubix" style="width:100%">
                     </div>
                     <div class="slides">
-                        <img id="horse" src="images/drawings/horse.jpg" alt="horse" style="width:100%">
+                        <img id="hourglass2" src="images/drawings/hourglass.png" alt="hourglass" style="width:100%">
                     </div>
                     <div class="slides">
-                        <img id="skeleton" src="images/drawings/skeleton.png" alt="skeleton" style="width:100%">
+                        <img id="skeleton2" src="images/drawings/skeleton.png" alt="skeleton" style="width:100%">
                     </div>
                     <div class="slides">
-                        <img id="hourglass" src="images/drawings/hourglass.png" alt="hourglass" style="width:100%">
+                        <img id="horse2" src="images/drawings/horse.png" alt="horse" style="width:100%">
                     </div>
-                    <a class="leftArrow" onclick="leftSlide()"><</a>
-                    <a class="rightArrow" onclick="rightSlide()">></a>
+                    <a class="leftArrow" onclick="leftSlide()">＜</a>
+                    <a class="rightArrow" onclick="rightSlide()">＞</a>
                 </div>
             </div>
         </section>
     </main>
     <script src="digital.js"></script>
-<body>
+
     
 <?php
 include 'footer.php'
