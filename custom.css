@@ -179,77 +179,39 @@ footer {
 }
 
 /* form page, questions */
-label {
-    display: block;
-}
-
-.radio label , .checkbox label {
-    display: inline;
- }
-
-input[type=checkbox] + label {
-    cursor: pointer;
-    font-size: 1em;
- }
-
- input[type=checkbox] {
-    appearance: none;
-    margin: 0;
-    padding: 3%;
- }
- input[type=checkbox] + label::before {
-    content: "\00a0";
-    display: inline-block;
-    width: 1em;  
-    height: 1em; 
-    line-height: 1em;
-    font-size: 0.8em;
-    margin-right: .8em;
-    background-color: white;
-    border: 0.09em solid rgba(0, 0, 0, 0.77);
- }
- 
- input[type=checkbox]:checked + label::before {
-    content: "\2713";
-    color: black;
-    background: orange;
- }
 
 input[type=radio] + label {
     cursor: pointer;
  }
  input[type=radio] {
     appearance: none;
-    margin: 0;
-    padding: 3%;
+    padding: 2%;
  }
  input[type=radio] + label::before {
     content: "\00a0";
-    border-radius: 1em;
+    border-radius: 2em;
     display: inline-block;
     width: 1em;  
     height: 1em; 
     line-height: 1em;
-    font-size: 0.8em;
     margin-right: .8em;
     background-color: white;
-    border: 0.09em solid rgba(0, 0, 0, 0.77);
+    border: 0.01em solid rgba(0, 0, 0, 0.77);
  }
  
  input[type=radio]:checked + label::before {
     content: "\2022";
     color: black;
-    background: orange;
+    background: lightpink;
  }
  
  input[type=submit] {
-    width: 20%;
-    background-color: purple;
+    width: 25%;
+    background-color: #6372ea;
     color: black;
-    padding: 1.2em;
-    margin: .5em;
+    padding: 20px;
+    margin: 20px;
     border: none;
-    border-radius: 1em;
     cursor: pointer;
 }
 
@@ -262,6 +224,7 @@ label {
     box-sizing: border-box;
     width: 20em;
     padding: .5em;
+    border: solid black 2px;
 }
 
  input[type=email] {
@@ -271,6 +234,11 @@ label {
      border: .1em #aaa;
      color: black;
      border: none;
+}
+
+textarea {
+    padding: 10px;
+    border: solid black 2px;
 }
 
 /* form page, styling questions */
@@ -444,12 +412,12 @@ form legend {
     font-size: 20px;
 }
 
-#txtFirstName, #txtLastName, #txtEmail{
-    border: solid black 2px;
+#btnSubmit{
+    float: right;
 }
 
-.btnSubmit{
-    border: solid green 2px;
+#btnSubmit:hover {
+    background-color: #8893e9;
 }
 
 .activePage {
@@ -472,12 +440,13 @@ form legend {
     width: 100%;
 }
 
-.radio, .listbox, .checkbox, .comments{
-    margin: 2%
+.newsletter, .radio, .listbox, .checkbox, .comments, .buttons{
+    width: 100%;
 }
 
-
-
+.buttons {
+    border: 0;
+}
 
 /* JavaScript */
 #newsletter{
@@ -571,11 +540,11 @@ span {
 }
 
 #navigate p, #map p {
-    color: tan;
+    color: rgb(225, 176, 111);
 }
 
-#navigate p, #map {
-    background-color: rgb(102, 102, 231);
+#navColumn1 p a, #navColumn2 p a, #sitemap p a,{
+    background-color: lightblue;
 }
 
 
@@ -583,7 +552,38 @@ span {
     width: 100%;
 }
 
-#txtFirstName, #txtLastName, #txtEmail {
+#txtFirstName, #txtLastName, #txtEmail{
     width: 100%;
-    border: 0;
+    border: solid black 2px;
+}
+
+
+
+/* Form page, Validation */
+
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 
+form:invalid {
+    border: 5px solid red;
+}
+
+
+form:valid {
+    border: 2px solid green;
+}
+
+
+
+input:invalid {
+    border: 2px solid red;
+}
+*/
+
+
+#bold {
+    font-weight: bold;
 }

@@ -8,6 +8,8 @@ $pathParts = pathinfo($phpSelf);
     <head> 
         <meta charset="utf-8">
         <title>Online Art Portfolio - Pearl Sutton</title>
+        <script src="validate.js" defer></script>
+        <script src="validate3.js" defer></script>
         <meta name="author" content="Pearl Sutton">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A composition of one's work is one of the best ways to open a door for others to

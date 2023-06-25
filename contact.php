@@ -34,7 +34,7 @@ function verifyAlphaNum($testString) {
         <h1>Contact</h1>
             <section class = "box-2">
                 <h2>Get in touch with us and provide us some feedback!</h2>
-                <p> Send us a message if you'd like to talk with us. We would also greatly appreciate any feedback you have, regarding both the artists' work and the functionality of the site.
+                <p id="bold"> Send us a message if you'd like to talk with us. We would also greatly appreciate any feedback you have, regarding both the artists' work and the functionality of the site.
                 </p>
                 <?php
                 if($_SERVER["REQUEST_METHOD"] == 'POST'){
@@ -110,7 +110,7 @@ function verifyAlphaNum($testString) {
                                 $dataIsGood = false;
                             }
                         } catch(PDOException $e) {
-                            $message = '<p>Error! Could not insert the record, please contact us at psutton1@uvm.edu</p>';
+                            $message = '<p>Error! Could not insert the record, please contact us at psutton1@uvm .edu for assistance.</p>';
                             $dataIsGood = false;
                         }
 
@@ -119,7 +119,7 @@ function verifyAlphaNum($testString) {
                         $subject = 'Confirmation';
 
                         $mailMessage .= '<p style="font": 12pt serif;"> Thank you so much
-                        for filling out the feedback form! It is very much appreciated and we hope you
+                        for filling out form! It is very much appreciated and we hope you
                         have a great day!</p';
                         $mailMessage .= '<span style="color: lightpurple; padding-left 4em;">';
                         $mailMessage .= '<p Pearl Sutton</span></p>';
@@ -149,7 +149,7 @@ function verifyAlphaNum($testString) {
                         <legend>Send us a message</legend>
                         <p>
                             <label class="required" for="txtFirstName">First Name:</label>
-                            <input id="txtFirstName" maxlength="50" name="txtFirstName" onfocus="this.select()" tabindex="305" type="text" value="<?php print $firstName; ?>" required>
+                            <input id="txtFirstName" maxlength="50" name="txtFirstName" onfocus="this.select()" tabindex="305" type="text" value="<?php print $firstName; ?>" required onsubmit="checkFirstName()">
                         </p>
 
                         <p>
@@ -168,8 +168,8 @@ function verifyAlphaNum($testString) {
                         </p>
 
                         <p>
-                            <label class="required" for="txtComments"></label>
-                            <textarea id="txtComments" name="txtComments" placeholder="Type in your message here" rows="6" cols="100"></textarea>
+                            <label class="required" for="txtComments">Message:</label>
+                            <textarea id="txtComments" name="txtComments" placeholder="Type in your message here" rows="10" cols="102"></textarea>
                         </p>
                     </fieldset>
 
@@ -205,8 +205,9 @@ function verifyAlphaNum($testString) {
                 <h2>Thank you!</h2>
                 <?php print '<p>.$message</p><pre>'; print '</pre>';?>
             </section>
-
     </main>
+<script src="validate.js"></script>
+
 <?php
 include 'footer.php';
 ?>
