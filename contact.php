@@ -7,7 +7,7 @@ $message = '';
 $firstName = '';
 $lastName = '';
 $email = '';
-$subject = '';
+$subjectForm = '';
 $comments = '';
 $visit = 'Yes';
 
@@ -42,7 +42,7 @@ function verifyAlphaNum($testString) {
                     $firstName = getData('txtFirstName');
                     $lastName = getData('txtLastName');
                     $email = getData('txtEmail');
-                    $subject = getData('txtSubject');
+                    $subjectForm = getData('txtSubject');
                     $comments = getData('txtComments');
                     $visit = getData('radVisit');
 
@@ -73,7 +73,7 @@ function verifyAlphaNum($testString) {
                         $dataIsGood = false;
                     }
 
-                    if($subject == ''){
+                    if($subjectForm == ''){
                         print '<p class="mistake">Please enter the subject of your message.</p>';
                         $dataIsGood = false;
                     } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -100,7 +100,7 @@ function verifyAlphaNum($testString) {
                             $sql = 'INSERT INTO tblContact (fldFirstName, fldLastName, fldEmail, fldSubject, fldComments, fldVisit)
                             VALUES (?, ?, ?, ?, ?, ?)';
                             $statement = $pdo->prepare($sql);
-                            $data = array($firstName, $lastName, $email, $subject, $comments, $visit);
+                            $data = array($firstName, $lastName, $email, $subjectForm, $comments, $visit);
 
                             if($statement->execute($data)){
                                 $message = '<h2>Thank you!</h2>';
@@ -116,7 +116,7 @@ function verifyAlphaNum($testString) {
 
                         $to = $email;
                         $from = 'Art & Film Co. Form <psutton1@uvm.edu>';
-                        $subject = 'Confirmation';
+                        $subject = 'Confirmation Email';
 
                         $mailMessage .= '<p style="font": 12pt serif;"> Thank you so much
                         for filling out form! It is very much appreciated and we hope you
@@ -149,28 +149,33 @@ function verifyAlphaNum($testString) {
                         <legend>Send us a message</legend>
                         <p>
                             <label class="required" for="txtFirstName">First Name:</label>
-                            <input id="txtFirstName" maxlength="50" name="txtFirstName" onfocus="this.select()" tabindex="305" type="text" value="<?php print $firstName; ?>" required onsubmit="checkFirstName()">
+                            <input id="txtFirstName" maxlength="50" name="txtFirstName" onfocus="this.select()" tabindex="305" type="text" value="<?php print $firstName; ?>" required>
                         </p>
+                        <p id="response1"></p>
 
                         <p>
                             <label class="required" for="txtLastName">Last Name:</label>
                             <input id="txtLastName" maxlength="50" name="txtLastName" onfocus="this.select()" tabindex="305" type="text" value="<?php print $lastName; ?>" required>
                         </p>
+                        <p id="response2"></p>
 
                         <p>
                             <label class="required" for="txtEmail">Email:</label>
                             <input id="txtEmail" maxlength="50" name="txtEmail" onfocus="this.select()" tabindex="305" type="email" value="<?php print $email; ?>" required>
                         </p>
+                        <p id="response3"></p>
 
                         <p>
                             <label class="required" for="txtSubject">Subject:</label>
-                            <input id="txtSubject" maxlength="50" name="txtSubject" onfocus="this.select()" tabindex="305" type="text" value="<?php print $subject; ?>" required>
+                            <input id="txtSubject" maxlength="50" name="txtSubject" onfocus="this.select()" tabindex="100" type="text" value="<?php print $subjectForm; ?>" required>
                         </p>
+                        <p id="response4"></p>
 
                         <p>
                             <label class="required" for="txtComments">Message:</label>
-                            <textarea id="txtComments" name="txtComments" placeholder="Type in your message here" rows="10" cols="102"></textarea>
+                            <textarea id="txtComments" name="txtComments" onfocus="this.select()" placeholder="Type in your message here" rows="10" cols="102"></textarea>
                         </p>
+                        <p id="response5"></p>
                     </fieldset>
 
                     <fieldset class="radio">
@@ -192,22 +197,24 @@ function verifyAlphaNum($testString) {
                                 if($visit == "No") print 'checked'; ?>>
                             <label class="radio-field" for="radVisitnNo">No</label>
                         </p>
+
+                        <p id="response6"></p>
                     </fieldset>
 
                     <fieldset class="buttons">
                         <input id="btnSubmit" name="btnSubmit" tabindex="900"
-                        type="submit" value="Submit">
+                        type="submit" value="Submit" onclick="validateFirstName();validateLastName();validateEmail();validateSubject();validateMessage()">
                     </fieldset>
                 </form>
             </section>
 
             <section class="form-feedback">
-                <h2>Thank you!</h2>
-                <?php print '<p>.$message</p><pre>'; print '</pre>';?>
+                <h2>Update:</h2>
+                <?php print $message?>
             </section>
     </main>
-<script src="validate.js"></script>
-
+<script src="validate.js" ></script>
+<script src="validate3.js" ></script>
 <?php
 include 'footer.php';
 ?>

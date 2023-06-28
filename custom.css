@@ -164,7 +164,6 @@ header {
     margin-right: 100px;
 }
 
-
 main {
     grid-area: main;
     padding: .8%
@@ -224,7 +223,6 @@ label {
     box-sizing: border-box;
     width: 20em;
     padding: .5em;
-    border: solid black 2px;
 }
 
  input[type=email] {
@@ -407,9 +405,9 @@ form fieldset {
 
 form legend {
     text-transform: uppercase;
-    font-weight: 7px;
     font-family: "Arial", serif;
     font-size: 20px;
+    font-weight: bold;
 }
 
 #btnSubmit{
@@ -543,16 +541,12 @@ span {
     color: rgb(225, 176, 111);
 }
 
-#navColumn1 p a, #navColumn2 p a, #sitemap p a,{
-    background-color: lightblue;
-}
-
 
 .newsletter {
     width: 100%;
 }
 
-#txtFirstName, #txtLastName, #txtEmail{
+#txtFirstName, #txtLastName, #txtEmail, #txtSubject{
     width: 100%;
     border: solid black 2px;
 }
@@ -566,24 +560,12 @@ input {
     margin-bottom: 10px;
 }
 
-/* 
-form:invalid {
-    border: 5px solid red;
-}
-
-
-form:valid {
-    border: 2px solid green;
-}
-
-
-
-input:invalid {
-    border: 2px solid red;
-}
-*/
-
-
 #bold {
     font-weight: bold;
 }
+
+/* Form page, Validation 
+#response1, #response2, #response3, #response4, #response5 {
+    color: red;
+}
+*/
