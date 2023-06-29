@@ -42,11 +42,15 @@ include 'top.php';
                     <a class="rightArrow" onclick="rightSlide()">＞</a>
                 </div>
             </div>
+
+            <div id="moreDrawing">
+                <button type="button" onclick="loadDrawing()">More Drawing</button>
+            </div>
         </section>
     </main>
-    <script src="digital.js"></script>
+    <script src="slideshow.js"></script>
+    <script src="ajax2.js"></script>
 
-    
 <?php
 include 'footer.php'
 ?>

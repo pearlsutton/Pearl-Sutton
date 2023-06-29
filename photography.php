@@ -6,11 +6,11 @@ include 'top.php';
         <h1>Photography</h1>
             <section class="photographyBox">
             <h2>Through my Lens</h2>
-                <p>Photography is the art of taking photos with a camera. Like all art mediums, photography is a very expressive form of art that allows great creativity and personality in imagery and composition.  Photography is, personally, my favorite medium to use because of the timelessness and uniqueness of it. Photographs are created from capturing moments in time, evidence of life and a window to our past.
+                <p>Photography is the art of taking photos with a camera. Like all art mediums, photography is a very expressive form of art that allows great creativity and personality in imagery and composition. Photography is, personally, my favorite medium to use because of the timelessness and uniqueness of it. Photographs are created from capturing moments in time, evidence of life and a window to our past.
                 </p>
-                <p>These photographs were taken throughout the past five years on a Nikon D5500 camera, with a 18-55mm and 70-200mm lens. As well, these photos are a combination of raw photos (not edited in any way) and edited photos. The softwares I use for editing are Adobe Photoshop, Adobe Lightroom, Apple Photos, and VSCO.
+                <p>I’ve always had an interest in taking photos, but it was around the age of eleven that I began to take it up as a hobby. Over these past years, I have become more “serious” or knowledgeable in the art form, by learning and studying techniques and observing other artists’ works. 
                 </p>
-                <p>My primary focus and subjects are on nature and landscapes. However, I would like to begin exploring portrait photography. I would also like to try my hand at film photography.
+                <p>My primary focus and subjects are on nature and landscapes, however, I would like to begin exploring portrait photography, and film photography. The photos below are a combination of raw (unedited) and edited photos that I have taken in the past five years with my Nikon DSLR camera (equipment information below in 'More Photography').
                 </p>
 
         <h2>Photographs</h2>        
@@ -154,9 +154,14 @@ include 'top.php';
                     <a class="rightArrow" onclick="rightSlide()">＞</a>
                 </div>
             </div>
+
+            <div id="morePhotography">
+                <button type="button" onclick="loadPhotography()">Click for More Photography!</button>
+            </div>
         </section>
     </main>
-    <script src="digital.js"></script>
+<script src="slideshow.js"></script>
+<script src="ajax2.js"></script>
 
 <?php
 include 'footer.php'
