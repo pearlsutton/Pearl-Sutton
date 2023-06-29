@@ -29,6 +29,7 @@ function validateForm(event) {
    if ((myForm.txtComments.value === "") || !isNaN(document.getElementById("txtComments").value))  {
       myForm.txtComments.style.backgroundColor = "pink";
    }
+
  }
  
  myForm = document.querySelector("#frmFeedback");

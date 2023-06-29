@@ -1,6 +1,6 @@
 
 /** Validate First Name */
-function validateFirstName() {
+function validateFirstName(event) {
    let firstName = document.getElementById("txtFirstName").value;
    let text;
    let myForm = document.querySelector("#frmFeedback");
@@ -121,20 +121,24 @@ function validateMessage() {
 
 /** Validate Radio Butons */
 function validateVisit() {
-   let yes = document.getElementById("#radVisitYes");
-   let neutral = document.getElementById("#radVisitNeutral");
-   let no = document.getElementById("#radVisitnNo");
+   let yes = document.getElementById("radVisitYes");
+   let neutral = document.getElementById("radVisitNeutral");
+   let no = document.getElementById("radVisitnNo");
    let text;
+   let myForm = document.querySelector("#frmFeedback");
 
    if (!yes.checked && !neutral.checked && !no.checked) {
       text = "Check at least one option.";
       let myForm = document.querySelector("#frmFeedback");
-      myForm.txtComments.style.borderColor = "red";
+      myForm.radioFieldset.style.borderColor = "red";
+      myForm.radioFieldset.style.backgroundColor = "pink";
    }
    else {
       text = "Valid.";
       let myForm = document.querySelector("#frmFeedback");
-      myForm.txtComments.style.borderColor = "lightGreen";
+      myForm.radioFieldset.style.borderColor = "green";
+      myForm.radioFieldset.style.backgroundColor = "lightGreen";
+
    }
    document.getElementById("response6").innerHTML = text;
  }
@@ -146,7 +150,8 @@ function checkForm(event) {
    document.getElementById("response2").innerHTML != "Valid." ||
    document.getElementById("response3").innerHTML != "Valid." ||
    document.getElementById("response4").innerHTML != "Valid." ||
-   document.getElementById("response5").innerHTML != "Valid.") {
+   document.getElementById("response5").innerHTML != "Valid." ||
+   document.getElementById("response6").innerHTML != "Valid.") {
       event.preventDefault();
    }
 }

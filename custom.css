@@ -182,7 +182,6 @@ input[type=radio] + label {
  }
  input[type=radio] {
     appearance: none;
-    padding: 2%;
  }
  input[type=radio] + label::before {
     content: "\00a0";
@@ -199,7 +198,7 @@ input[type=radio] + label {
  input[type=radio]:checked + label::before {
     content: "\2022";
     color: black;
-    background: lightpink;
+    background: lightblue;
  }
  
  input[type=submit] {
@@ -459,12 +458,12 @@ form legend {
 }
 
 .leftArrow {
-    left: 230px;
+    left: 10%;
     top: 400px
 }
 
 .rightArrow {
-    right: 230px;
+    right: 10%;
     top: 400px
 }
 
@@ -534,7 +533,7 @@ span {
     color: rgb(225, 176, 111);
 }
 
-#txtFirstName, #txtLastName, #txtEmail, #txtSubject{
+#txtFirstName, #txtLastName, #txtEmail, #txtSubject, #radioField{
     width: 100%;
     border: solid black 2px;
 }
@@ -551,3 +550,4 @@ input {
 .photographyBox p {
     width: 180%;
 }
+

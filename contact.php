@@ -148,62 +148,61 @@ function verifyAlphaNum($testString) {
                     <fieldset class="newsletter">
                         <legend>Send us a message</legend>
                         <p>
-                            <label class="required" for="txtFirstName">First Name:</label>
-                            <input id="txtFirstName" maxlength="50" name="txtFirstName" onfocus="this.select()" tabindex="305" type="text" value="<?php print $firstName; ?>" required>
+                            <label for="txtFirstName">First Name:</label>
+                            <input id="txtFirstName" maxlength="50" name="txtFirstName" onfocus="this.select()" tabindex="305" type="text" value="<?php print $firstName; ?>">
                         </p>
                         <p id="response1"></p>
 
                         <p>
-                            <label class="required" for="txtLastName">Last Name:</label>
-                            <input id="txtLastName" maxlength="50" name="txtLastName" onfocus="this.select()" tabindex="305" type="text" value="<?php print $lastName; ?>" required>
+                            <label for="txtLastName">Last Name:</label>
+                            <input id="txtLastName" maxlength="50" name="txtLastName" onfocus="this.select()" tabindex="305" type="text" value="<?php print $lastName; ?>">
                         </p>
                         <p id="response2"></p>
 
                         <p>
-                            <label class="required" for="txtEmail">Email:</label>
-                            <input id="txtEmail" maxlength="50" name="txtEmail" onfocus="this.select()" tabindex="305" type="email" value="<?php print $email; ?>" required>
+                            <label for="txtEmail">Email:</label>
+                            <input id="txtEmail" maxlength="50" name="txtEmail" onfocus="this.select()" tabindex="305" type="email" value="<?php print $email; ?>">
                         </p>
                         <p id="response3"></p>
 
                         <p>
-                            <label class="required" for="txtSubject">Subject:</label>
-                            <input id="txtSubject" maxlength="50" name="txtSubject" onfocus="this.select()" tabindex="100" type="text" value="<?php print $subjectForm; ?>" required>
+                            <label for="txtSubject">Subject:</label>
+                            <input id="txtSubject" maxlength="50" name="txtSubject" onfocus="this.select()" tabindex="100" type="text" value="<?php print $subjectForm; ?>">
                         </p>
                         <p id="response4"></p>
 
                         <p>
-                            <label class="required" for="txtComments">Message:</label>
+                            <label for="txtComments">Message:</label>
                             <textarea id="txtComments" name="txtComments" onfocus="this.select()" placeholder="Type in your message here" rows="10" cols="102"></textarea>
                         </p>
                         <p id="response5"></p>
                     </fieldset>
 
-                    <fieldset class="radio">
+                    <fieldset class="radio" id="radioFieldset">
                         <legend>Were you satisfied with your visit?</legend>
                         <p>
-                            <input type="radio" id="radVisitYes" name="radVisit" value="Yes" tabindex="410" required <?php 
+                            <input type="radio" id="radVisitYes" name="radVisit" value="Yes" tabindex="410" <?php 
                                 if($visit == "Yes") print 'checked'; ?>>
                             <label class="radio-field" for="radVisitYes">Yes</label>
                         </p>
 
                         <p>
-                            <input type="radio" id="radVisitNeutral" name="radVisit" value="Neutral" tabindex="410" required <?php
+                            <input type="radio" id="radVisitNeutral" name="radVisit" value="Neutral" tabindex="410" <?php
                                 if($visit == "Neutral") print 'checked'; ?>>
                             <label class="radio-field" for="radVisitNeutral">Neutral</label>
                         </p>
 
                         <p>
-                            <input type="radio" id="radVisitnNo" name="radVisit" value="No" tabindex="410" required <?php
+                            <input type="radio" id="radVisitnNo" name="radVisit" value="No" tabindex="410" <?php
                                 if($visit == "No") print 'checked'; ?>>
                             <label class="radio-field" for="radVisitnNo">No</label>
                         </p>
-
                         <p id="response6"></p>
                     </fieldset>
 
                     <fieldset class="buttons">
                         <input id="btnSubmit" name="btnSubmit" tabindex="900"
-                        type="submit" value="Submit" onclick="validateFirstName();validateLastName();validateEmail();validateSubject();validateMessage()">
+                        type="submit" value="Submit" onclick="validateFirstName();validateLastName();validateEmail();validateSubject();validateMessage();validateVisit()">
                     </fieldset>
                 </form>
             </section>
