@@ -14,24 +14,31 @@ include 'top.php';
             </p>
             <p> The watercolor pieces were completed in the summer of 2023. The watercolors were a surprising and challenging transition from acrylics. In this study, the curriculum followed more of learning the properties and characteristics of the watercolors, how they behaved and how we could use these to produce the ideas we wished. 
             </p>
+
+            <div class="buttons" id="buttonSet">
+                <button class="button" onclick="showAllFunction()">Show All</button>
+                <button class="button" onclick="showAcrylicsFunction()">Acrylic</button>
+                <button class="button" onclick="showWatercolorsFunction()">Watercolor</button>
+            </div>
+
             <h2>Projects</h2>
             <!--Grid Images-->
             <figure class="photographyGrid">
-                <img class="grid" id="man" src="images/paintings/man.png" alt="man" style="width:100%" onclick="openImage();currentSlide(1)">
-                <img class="grid" id="woman" src="images/paintings/woman.png" alt="woman" style="width:100%" onclick="openImage();currentSlide(2)">
-                <img class="grid" id="greenVase" src="images/paintings/greenVase.png" alt="greenVase" style="width:100%" onclick="openImage();currentSlide(3)">
-                <img class="grid" id="colorAbstract" src="images/paintings/colorAbstract.png" alt="colorAbstract" style="width:100%" onclick="openImage();currentSlide(4)">
-                <img class="grid" id="flowersAbstract" src="images/paintings/flowersAbstract.jpeg" alt="flowersAbstract" style="width:100%" onclick="openImage();currentSlide(5)">
-                <img class="grid" id="bluePitcher" src="images/paintings/bluePitcher.jpeg" alt="bluePitcher" style="width:100%" onclick="openImage();currentSlide(6)">
-                <img class="grid" id="greenPitcher" src="images/paintings/greenPitcher.png" alt="greenPitcher" style="width:100%" onclick="openImage();currentSlide(7)">
-                <img class="grid" id="openForm" src="images/paintings/openForm.jpeg" alt="openForm" style="width:100%" onclick="openImage();currentSlide(8)">
-                <img class="grid" id="starryblue" src="images/paintings/starryblue.jpeg" alt="starryblue" style="width:100%" onclick="openImage();currentSlide(9)">
-                <img class="grid" id="starryred" src="images/paintings/starryred.jpeg" alt="starryred" style="width:100%" onclick="openImage();currentSlide(10)">
-                <img class="grid" id="eyes" src="images/paintings/eyes.png" alt="eyes" style="width:100%" onclick="openImage();currentSlide(11)">
-                <img class="grid" id="pumpkins" src="images/paintings/pumpkins.png" alt="pumpkins" style="width:100%" onclick="openImage();currentSlide(12)">
-                <img class="grid" id="alice" src="images/paintings/alice.jpeg" alt="alice" style="width:100%" onclick="openImage();currentSlide(13)">
-                <img class="grid" id="pot" src="images/paintings/pot.png" alt="pot" style="width:100%" onclick="openImage();currentSlide(14)">
-                <img class="grid" id="wave" src="images/paintings/wave.jpeg" alt="wave" style="width:100%" onclick="openImage();currentSlide(15)">
+                <img class="grid watercolor" id="man" src="images/paintings/man.png" alt="man" style="width:100%" onclick="openImage();currentSlide(1)">
+                <img class="grid watercolor" id="woman" src="images/paintings/woman.png" alt="woman" style="width:100%" onclick="openImage();currentSlide(2)">
+                <img class="grid acrylic" id="greenVase" src="images/paintings/greenVase.png" alt="greenVase" style="width:100%" onclick="openImage();currentSlide(3)">
+                <img class="grid watercolor" id="colorAbstract" src="images/paintings/colorAbstract.png" alt="colorAbstract" style="width:100%" onclick="openImage();currentSlide(4)">
+                <img class="grid watercolor" id="flowersAbstract" src="images/paintings/flowersAbstract.jpeg" alt="flowersAbstract" style="width:100%" onclick="openImage();currentSlide(5)">
+                <img class="grid watercolor" id="bluePitcher" src="images/paintings/bluePitcher.jpeg" alt="bluePitcher" style="width:100%" onclick="openImage();currentSlide(6)">
+                <img class="grid watercolor" id="greenPitcher" src="images/paintings/greenPitcher.png" alt="greenPitcher" style="width:100%" onclick="openImage();currentSlide(7)">
+                <img class="grid watercolor" id="openForm" src="images/paintings/openForm.jpeg" alt="openForm" style="width:100%" onclick="openImage();currentSlide(8)">
+                <img class="grid acrylic" id="starryblue" src="images/paintings/starryblue.jpeg" alt="starryblue" style="width:100%" onclick="openImage();currentSlide(9)">
+                <img class="grid acrylic" id="starryred" src="images/paintings/starryred.jpeg" alt="starryred" style="width:100%" onclick="openImage();currentSlide(10)">
+                <img class="grid watercolor" id="eyes" src="images/paintings/eyes.png" alt="eyes" style="width:100%" onclick="openImage();currentSlide(11)">
+                <img class="grid acrylic" id="pumpkins" src="images/paintings/pumpkins.png" alt="pumpkins" style="width:100%" onclick="openImage();currentSlide(12)">
+                <img class="grid acrylic" id="alice" src="images/paintings/alice.jpeg" alt="alice" style="width:100%" onclick="openImage();currentSlide(13)">
+                <img class="grid acrylic" id="pot" src="images/paintings/pot.png" alt="pot" style="width:100%" onclick="openImage();currentSlide(14)">
+                <img class="grid acrylic" id="wave" src="images/paintings/wave.jpeg" alt="wave" style="width:100%" onclick="openImage();currentSlide(15)">
             </figure>
 
             <!--Modal Images -->
@@ -95,6 +102,7 @@ include 'top.php';
     </main>
     <script src="slideshow.js"></script>
     <script src="ajax.js"></script>
+    <script src="paintingFilterArray.js"></script>
 <?php
 include 'footer.php'
 ?> 

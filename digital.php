@@ -10,13 +10,19 @@ include 'top.php';
             </p>
             <p> For the digital pieces below, I used the Adobe Creative Cloud software, particularly the Adobe Illustrator, Adobe Photoshop, and Adobe Design applications. These were created in the fall of 2020. I have also worked with Procreate, a raster graphic editor app.</p>
 
+        <div class="buttons" id="buttonSet">
+            <button class="button" onclick="showAll()">Show All</button>
+            <button class="button" onclick="showNone();showIllustrator()">Adobe Illustrator</button>
+            <button class="button" onclick="showNone();showPhotoshop()">Adobe Photoshop</button>
+            <button class="button" onclick="showNone();showInDesign()">Adobe InDesign</button>
+        </div> 
             <h2>Projects</h2>
             <!--Grid Images-->
                 <figure class="digitalGrid">
-                    <img class="grid" id="card1" src="images/digital/card1.png" alt="card1" style="width:100%" onclick="openImage();currentSlide(1)">
-                    <img class="grid" id="card2" src="images/digital/card2.png" alt="card2" style="width:100%" onclick="openImage();currentSlide(2)">
-                    <img class="grid" id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%" onclick="openImage();currentSlide(3)">
-                    <img class="grid" id="jess" src="images/digital/jess.png" alt="jess" style="width:100%" onclick="openImage();currentSlide(4)">
+                    <img class="grid design" id="card1" src="images/digital/card1.png" alt="card1" style="width:100%" onclick="openImage();currentSlide(1)">
+                    <img class="grid design" id="card2" src="images/digital/card2.png" alt="card2" style="width:100%" onclick="openImage();currentSlide(2)">
+                    <img class="grid illustrator" id="flyer" src="images/digital/flyer.jpg" alt="flyer" style="width:100%" onclick="openImage();currentSlide(3)">
+                    <img class="grid photoshop" id="jess" src="images/digital/jess.png" alt="jess" style="width:100%" onclick="openImage();currentSlide(4)">
                 </figure>
 
             <!--Modal Images -->
@@ -47,6 +53,7 @@ include 'top.php';
     </main>
     <script src="slideshow.js"></script>
     <script src="ajax.js"></script>
+    <script src="digitalFilterArray.js"></script>
 
 <?php
 include 'footer.php'

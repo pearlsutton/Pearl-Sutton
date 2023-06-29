@@ -551,3 +551,14 @@ input {
     width: 180%;
 }
 
+.button {
+    background-color: rgba(122, 83, 250, 0.36);
+    border-color: solid black 2px;
+    border-radius: 0;
+    font-family: "Courier New";
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(151, 118, 241);
+}

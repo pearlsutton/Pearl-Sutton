@@ -9,14 +9,19 @@ include 'top.php';
             <p>Drawing is the technique of applying pen, pencil, charcoal, or any other mark making tools (outside of paint) to create images. Unlike other mediums, drawing does not require a lot of materials and is a great stepping stone to explore other artistic forms, such as painting and printmaking. As well, drawing can be seen as a very forgiving medium, as an artist can sketch out and outline their ideas beforehand, and also erase any elements they wish to. There are different styles and approaches for drawing, and it is often best to both learn from others and find your own artistic style. For my pieces, I used graphite pencils, colored pencils, and charcoal.
             </p>
 
+        <div class="buttons" id="buttonSet">
+            <button class="button" onclick="showAll()">Show All</button>
+            <button class="button" onclick="showNone();showPencil()">Graphite Pencils</button>
+            <button class="button" onclick="showNone();showCharcoal()">Charcoal</button>
+        </div> 
             <h2>Projects</h2>
             <!--Grid Images-->
                 <figure class="digitalGrid">
-                    <img class="grid" id="teapot" src="images/drawings/teapot.png" alt="teapot" style="width:100%" onclick="openImage();currentSlide(1)">
-                    <img class="grid" id="rubix" src="images/drawings/rubix.png" alt="rubix" style="width:100%" onclick="openImage();currentSlide(2)">
-                    <img class="grid" id="hourglass" src="images/drawings/hourglass.png" alt="hourglass" style="width:100%" onclick="openImage();currentSlide(3)">
-                    <img class="grid" id="skeleton" src="images/drawings/skeleton.png" alt="skeleton" style="width:100%" onclick="openImage();currentSlide(4)">
-                    <img class="grid" id="horse" src="images/drawings/horse.png" alt="horse" style="width:100%" onclick="openImage();currentSlide(5)">
+                    <img class="grid pencil" id="teapot" src="images/drawings/teapot.png" alt="teapot" style="width:100%" onclick="openImage();currentSlide(1)">
+                    <img class="grid pencil" id="rubix" src="images/drawings/rubix.png" alt="rubix" style="width:100%" onclick="openImage();currentSlide(2)">
+                    <img class="grid charcoal" id="hourglass" src="images/drawings/hourglass.png" alt="hourglass" style="width:100%" onclick="openImage();currentSlide(3)">
+                    <img class="grid pencil" id="skeleton" src="images/drawings/skeleton.png" alt="skeleton" style="width:100%" onclick="openImage();currentSlide(4)">
+                    <img class="grid charcoal" id="horse" src="images/drawings/horse.png" alt="horse" style="width:100%" onclick="openImage();currentSlide(5)">
                 </figure>
 
             <!--Modal Images -->
@@ -50,6 +55,7 @@ include 'top.php';
     </main>
     <script src="slideshow.js"></script>
     <script src="ajax.js"></script>
+    <script src="drawingFilterArray.js"></script>
 
 <?php
 include 'footer.php'
