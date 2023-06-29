@@ -552,9 +552,6 @@ span {
 }
 
 
-
-/* Form page, Validation */
-
 input {
     display: block;
     margin-bottom: 10px;
@@ -564,8 +561,6 @@ input {
     font-weight: bold;
 }
 
-/* Form page, Validation 
-#response1, #response2, #response3, #response4, #response5 {
-    color: red;
+.photographyBox p {
+    width: 180%;
 }
-*/
