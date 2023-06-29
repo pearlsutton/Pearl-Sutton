@@ -17,8 +17,8 @@
             <p>Map</p> 
         </div>
         <div class="map" id="sitemap">
-            <p><a href="../index.php">Site map</a></p> 
-            <p><a href='https://psutton1.w3.uvm.edu/cs145/index.php'>Pearl Sutton - Section ONL</a></p>  
+            <p><a href="../sitemap.php">Site map</a></p> 
+            <p><a href='https://psutton1.w3.uvm.edu/cs145/sitemap.php'>Pearl Sutton - Section ONL</a></p>  
         </div>
 
     </div>

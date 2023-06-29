@@ -7,7 +7,6 @@
     --form-border: rgba(165, 118, 251, 0.6)
 }
 
-/*  */
 * {
     margin: 0;
     padding: .3%;
@@ -17,8 +16,8 @@
 section, h2, h3 {
     padding: 1%;
 }
-/*  */
 
+/** Grids */
 body {
     background-color: var(--main-bg-color);
     width: 85%;
@@ -178,7 +177,6 @@ footer {
 }
 
 /* form page, questions */
-
 input[type=radio] + label {
     cursor: pointer;
  }
@@ -336,7 +334,7 @@ figcaption {
 
 a:hover {
     background-color: rgb(195, 235, 249);
-    }
+}
 
 h1 {
     text-transform: uppercase;
@@ -352,7 +350,6 @@ footer p {
     
     color: black;
 }
-
 
 /* table */
 table {
@@ -422,7 +419,6 @@ form legend {
     background-color: rgb(108, 187, 220);
 }
 
-
 .box2 p, .box3 p, .box4 p, .box5 p, .photographyBox p, .paintingBox p, .box-2 p {
     width: 130%;
     margin: 10px;
@@ -446,12 +442,10 @@ form legend {
     border: 0;
 }
 
-/* JavaScript */
 #newsletter{
     display: none;
     border: solid black 2px;
 }
-
 
 .leftArrow, .rightArrow {
     cursor: pointer;
@@ -462,26 +456,25 @@ form legend {
     color: black;
     transition: 0.6s ease;
     background-color: lavender;
-  }
+}
 
 .leftArrow {
     left: 230px;
     top: 400px
-  }
+}
 
 .rightArrow {
     right: 230px;
     top: 400px
-  }
+}
 
-
-  .slideshow {
+.slideshow {
     max-width: 2000px;
     position: relative;
     margin: auto;
-  }
+}
 
-  /* The Modal (background) */
+/* The Modal (background) */
 .slideshow {
     display: none;
     position: fixed;
@@ -492,41 +485,41 @@ form legend {
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
-  }
+}
   
-  /* Modal Content */
-  .images {
+/* Modal Content */
+.images {
     background-color: #fefefe;
     padding: 30px;
     width: 50%;
     margin: auto;
-  }
+}
   
-  /* The Close Button */
-  .close {
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
 /* Highlight photos in grid, not modal */
-  .grid:hover{
+.grid:hover{
       opacity: 0.7;
       cursor: pointer;
-  }
+}
   
 .close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
 
 .leftArrow:hover, .rightArrow:hover {
       cursor: pointer;
       background-color: green;
-  }
+}
 
 .vertical {
     width: 72%;
@@ -541,16 +534,10 @@ span {
     color: rgb(225, 176, 111);
 }
 
-
-.newsletter {
-    width: 100%;
-}
-
 #txtFirstName, #txtLastName, #txtEmail, #txtSubject{
     width: 100%;
     border: solid black 2px;
 }
-
 
 input {
     display: block;

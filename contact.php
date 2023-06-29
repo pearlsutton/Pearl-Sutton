@@ -213,8 +213,8 @@ function verifyAlphaNum($testString) {
                 <?php print $message?>
             </section>
     </main>
-<script src="validate.js" ></script>
-<script src="validate3.js" ></script>
+<script src="validation1.js" ></script>
+<script src="validation2.js" ></script>
 <?php
 include 'footer.php';
 ?>

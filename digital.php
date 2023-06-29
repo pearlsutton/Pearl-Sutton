@@ -41,12 +41,12 @@ include 'top.php';
             </div>
 
             <div id="moreDigital">
-                <button type="button" onclick="loadDigital()">More Digital</button>
+                <button type="button" onclick="loadDigital()">Click for More Digital!</button>
             </div>
         </section>
     </main>
     <script src="slideshow.js"></script>
-    <script src="ajax2.js"></script>
+    <script src="ajax.js"></script>
 
 <?php
 include 'footer.php'

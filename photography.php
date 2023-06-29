@@ -161,7 +161,7 @@ include 'top.php';
         </section>
     </main>
 <script src="slideshow.js"></script>
-<script src="ajax2.js"></script>
+<script src="ajax.js"></script>
 
 <?php
 include 'footer.php'

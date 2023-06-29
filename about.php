@@ -16,9 +16,9 @@ include 'top.php';
                 <figure class="profilePhoto" >
                     <img id="aboutme" src="images/aboutme.png" alt="aboutme" style="width:100%">
                 </figure>
-</div>
-
+            </div>
     </main>
+    <script src="ajax2.js"></script>
 <?php
 include 'footer.php'
 ?>
