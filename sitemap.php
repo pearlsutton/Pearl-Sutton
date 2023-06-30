@@ -125,6 +125,10 @@
                 <p><a href="final/validation1.js">validation1.js</a></p> 
                 <p><a href="final/validation2.js">validation2.js</a></p> 
                 <p><a href="final/ajax.js">ajax.js</a></p> 
+                <p><a href="final/photographyFilterArray.js">photographyFilterArray.js</a></p> 
+                <p><a href="final/paintingFilterArray.js">paintingFilterArray.js</a></p> 
+                <p><a href="final/drawingFilterArray.js">drawingFilterArray.js</a></p> 
+                <p><a href="final/digitalFilterArray.js">digitalFilterArray.js</a></p> 
                 <p><a href="final/images/wireframe1.jpg">wireframe1.jpg</a></p> 
                 <p></p>
             </section>
@@ -133,7 +137,26 @@
                 <h3>Notes to grader</h3>
                 <p>CS008 Website Comparison: https://psutton1.w3.uvm.edu/cs008/final/index.php</p>  
                 <p>Commits: https://github.com/pearlsutton/Pearl-Sutton/tree/cs145</p>
+                <p>I used JavaScript to work with all of my main images for each page, to click on them, and open a mini window and click through.</p>
+
                 
+            </section>
+        </section>
+
+        <section class="grid-layout">
+            <h2>Week 4</h2>
+            <section class="public-files">
+                <h3>Learn By Doing</h3>
+                <p></p>   
+                   
+            </section>
+            <section class="supporting-files">
+                <h3>Additional Challenges</h3>
+            </section>
+
+            <section class="grader-notes">
+                <h3>Notes</h3>
+                <p></p>
             </section>
         </section>
 

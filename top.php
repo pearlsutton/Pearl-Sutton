@@ -15,7 +15,6 @@ $pathParts = pathinfo($phpSelf);
         years. This online portfolio provides me an opportunity to connect with others who share
         the same ideas and interests, as well as hold a place for me to see my growth and improvement overtime.">
 
-        
         <link rel="stylesheet"
             href="css/custom.css?version=<?php print time(); ?>"
             type="text/css">

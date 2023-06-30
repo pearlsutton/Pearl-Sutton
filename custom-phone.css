@@ -62,3 +62,27 @@ nav a {
     margin-right: 1px;
     padding: 2px;
 }
+
+.leftArrow {
+    left: 2%;
+    top: 40%;
+}
+.rightArrow {
+    right: 2%;
+    top: 40%;
+}
+
+.leftArrow, .rightArrow {
+    cursor: pointer;
+    position: absolute;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    transition: 0.6s ease;
+    background-color: transparent;
+}
+
+.images {
+    margin-top: 50%;
+}
