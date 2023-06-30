@@ -130,7 +130,7 @@
                 <p><a href="final/drawingFilterArray.js">drawingFilterArray.js</a></p> 
                 <p><a href="final/digitalFilterArray.js">digitalFilterArray.js</a></p> 
                 <p><a href="final/images/wireframe1.jpg">wireframe1.jpg</a></p> 
-                <p></p>
+                <p><a href="final/images/video-description.mov">video-description</a></p> 
             </section>
 
             <section class="grader-notes">

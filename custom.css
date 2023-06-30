@@ -547,10 +547,6 @@ input {
     font-weight: bold;
 }
 
-.photographyBox p {
-    width: 180%;
-}
-
 .button {
     background-color: rgba(122, 83, 250, 0.36);
     border-color:black;
