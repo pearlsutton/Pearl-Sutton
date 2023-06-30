@@ -173,7 +173,7 @@ function verifyAlphaNum($testString) {
 
                         <p>
                             <label for="txtComments">Message:</label>
-                            <textarea id="txtComments" name="txtComments" onfocus="this.select()" placeholder="Type in your message here" rows="10" cols="102" value="<?php print $email; ?>"></textarea>
+                            <textarea id="txtComments" name="txtComments" onfocus="this.select()" placeholder="Type in your message here" rows="10" cols="102"></textarea>
                         </p>
                         <p id="response5"></p>
                     </fieldset>

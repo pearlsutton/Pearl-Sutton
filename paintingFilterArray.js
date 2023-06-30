@@ -1,6 +1,6 @@
 /** Filter Paintings */
 
-function showAllFunction() {
+function showAll() {
     let grid = document.getElementsByClassName("grid");
     for (index = 0; index < grid.length; index++) {
         grid[index].style.display = "block";  

@@ -137,7 +137,7 @@
                 <h3>Notes to grader</h3>
                 <p>CS008 Website Comparison: https://psutton1.w3.uvm.edu/cs008/final/index.php</p>  
                 <p>Commits: https://github.com/pearlsutton/Pearl-Sutton/tree/cs145</p>
-                <p>I used JavaScript to work with all of my main images for each page, to click on them, and open a mini window and click through.</p>
+                <p>I used JavaScript to work with all of my main images for each page, to click on them, and open a mini window to click through each one individually.</p>
 
                 
             </section>

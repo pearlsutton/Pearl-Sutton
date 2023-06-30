@@ -16,9 +16,9 @@ include 'top.php';
             </p>
 
             <div class="buttons" id="buttonSet">
-                <button class="button" onclick="showAllFunction()">Show All</button>
-                <button class="button" onclick="showAcrylicsFunction()">Acrylic</button>
-                <button class="button" onclick="showWatercolorsFunction()">Watercolor</button>
+                <button class="button" onclick="showAll()">Show All</button>
+                <button class="button" onclick="showNone();showAcrylicsFunction()">Acrylic</button>
+                <button class="button" onclick="showNone();showWatercolorsFunction()">Watercolor</button>
             </div>
 
             <h2>Projects</h2>
